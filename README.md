@@ -6,7 +6,9 @@
 
     <?php
     require_once  "vendor/autoload.php";
-    $auto=new Auto\Auto(1,"cookie.ck");
+    use Motniemtin\Auto\Auto;
+    
+    $auto=new Auto(1,"cookie.ck");
     echo $auto->Get('sample.com');
     $string="123456789123456789123456789<div class=\"divclass\">div content 1</div><div class=\"divclass\">div content 2</div>";
     echo $auto->SCodeOne("1","9",$string)."\n";
