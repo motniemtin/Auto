@@ -314,7 +314,7 @@ class Auto{
           return $return;
       }
       public function GetImage($fileurl, $local_path){
-          $url=str_replace(' ','%20',$url);
+          $url=str_replace(' ','%20',$fileurl);
           $ref=str_replace(' ','%20',$ref);
           $filename = basename($fileurl);
           $filename = "yesmanga_" . $filename;
