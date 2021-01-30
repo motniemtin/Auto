@@ -12,7 +12,8 @@ class Auto{
       public $proxy;
       public $proxytype;
       public $getheader, $refer;
-      public function __construct($cookies = TRUE, $cookie = 'temp/cookies.txt', $compression = 'gzip', $proxy = ''){
+      public function __construct($cookies = TRUE, $cookie = null, $compression = 'gzip', $proxy = ''){
+          if($cookie == null)$cookie=dirname(__FILE__)."/cookies.txt";
           $this->headers;
           $this->headers[0]   = 'Content-type: application/x-www-form-urlencoded;charset=UTF-8';
           $this->headers[1]   = 'Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8';
